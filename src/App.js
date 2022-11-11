@@ -1,16 +1,26 @@
 import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import NavBar from "./components/NavBar";
-import Home from "./components/Home";
+import About from "./components/About";
+import Contact from "./components/Contact";
+import Projects from "./components/Projects";
 import "./app.scss";
 
 function App() {
   return (
     <div className="app-wrapper">
-      <NavBar />
-      <div>
-        <Home />
-        <div>Working</div>
-      </div>
+      <Router>
+        <NavBar />
+        <div>
+          <Routes>
+            <Route path="/" element={<About />} />
+
+            <Route path="/projects" element={<Projects />} />
+
+            <Route exact path="/contact" element={<Contact />} />
+          </Routes>
+        </div>
+      </Router>
     </div>
   );
 }
