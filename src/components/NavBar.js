@@ -38,10 +38,7 @@ function NavBar() {
         }}
         onClick={() => navigate("/")}
       >
-        <Typography
-          variant="h5"
-          style={{ fontFamily: "Archivo Black, sans-serif" }}
-        >
+        <Typography variant="h5" style={{ fontFamily: "'Oxygen', sans-serif" }}>
           About Me
         </Typography>
       </Button>
@@ -56,10 +53,7 @@ function NavBar() {
         }}
         onClick={() => navigate("/projects")}
       >
-        <Typography
-          variant="h5"
-          style={{ fontFamily: "Archivo Black, sans-serif" }}
-        >
+        <Typography variant="h5" style={{ fontFamily: "'Oxygen', sans-serif" }}>
           Projects
         </Typography>
       </Button>
@@ -74,10 +68,7 @@ function NavBar() {
         }}
         onClick={() => navigate("/contact")}
       >
-        <Typography
-          variant="h5"
-          style={{ fontFamily: "Archivo Black, sans-serif" }}
-        >
+        <Typography variant="h5" style={{ fontFamily: "'Oxygen', sans-serif" }}>
           Contact
         </Typography>
       </Button>
