@@ -1,0 +1,89 @@
+.about-wrapper {
+  display: grid;
+  grid-template-columns: 66% 33%;
+  height: calc(100vh - 66px);
+  width: 90%;
+
+  .left-centering-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .main-body-wrapper {
+      width: 50%;
+      text-align: center;
+
+      .name-wrapper {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+
+        .hi {
+          color: white;
+          font-family: "Mulish", sans-serif;
+        }
+
+        .exclamation {
+          color: #fee36e;
+          margin-right: 10px;
+        }
+
+        .Matt {
+          color: #fee36e;
+          font-family: "Mulish", sans-serif;
+          margin-left: 10px;
+        }
+      }
+
+      .subtitle {
+        color: white;
+        margin-top: 15px;
+      }
+
+      .social-wrapper {
+        display: flex;
+        justify-content: center;
+        margin-top: 25px;
+
+        .linkedin {
+          color: white;
+          background-color: #0a66c2;
+          margin-right: 10px;
+          height: 30px;
+          width: 30px;
+
+          .linkedin-img {
+            color: inherit;
+          }
+        }
+
+        .github {
+          color: black;
+          background-color: white;
+          margin-left: 10px;
+          height: 30px;
+          width: 30px;
+
+          .github-img {
+            color: inherit;
+            height: 35px;
+          }
+        }
+      }
+    }
+  }
+
+  .right-centering-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .projects {
+      height: 80%;
+      width: 75%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+}

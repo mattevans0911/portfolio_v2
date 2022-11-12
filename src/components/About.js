@@ -4,113 +4,85 @@ import Typography from "@mui/material/Typography";
 import Avatar from "@mui/material/Avatar";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import GitHubIcon from "@mui/icons-material/GitHub";
+import { Button } from "@mui/material";
+import Modal from "@mui/material/Modal";
+import resume from "../images/resume.png";
 
 function About() {
+  const [open, setOpen] = React.useState(false);
+  const handleOpen = () => setOpen(true);
+  const handleClose = () => setOpen(false);
   return (
-    <div
-      style={{
-        display: "grid",
-        gridTemplateColumns: "66% 33%",
-        height: "calc(100vh - 66px)",
-      }}
-    >
-      <div
-        style={{
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center",
-        }}
-      >
-        <div
-          style={{
-            width: "50%",
-            textAlign: "center",
-          }}
-        >
-          <div style={{ display: "flex", justifyContent: "center" }}>
-            <Typography
-              variant="h2"
-              style={{ color: "white", fontFamily: "'Mulish', sans-serif" }}
-            >
-              Hi! I'm
+    <div className="about-wrapper">
+      <div className="left-centering-wrapper">
+        <div className="main-body-wrapper">
+          <div className="name-wrapper">
+            <Typography className="hi" variant="h2">
+              Hi, I'm
             </Typography>
-            <Typography
-              variant="h2"
-              style={{
-                color: "#fee36e",
-                fontFamily: "'Mulish', sans-serif",
-                marginLeft: "15px",
-              }}
-            >
+            <Typography className="Matt" variant="h2">
               Matt.
             </Typography>
           </div>
-          <div>
-            <Typography variant="subtitle1" style={{ color: "white" }}>
-              I am a passionate Full Stack Developer with experience building
-              Web Applications in Reactjs and Python.
-            </Typography>
-          </div>
-          <div
-            style={{
-              display: "flex",
-              justifyContent: "center",
-              marginTop: "25px",
-            }}
-          >
-            <Avatar
-              style={{
-                color: "white",
-                backgroundColor: "#0a66c2",
-                marginRight: "10px",
-                height: "30px",
-                width: "30px",
-              }}
-            >
+
+          <Typography variant="h6" className="subtitle">
+            I am a passionate Full Stack Developer with experience building Web
+            Applications in Reactjs and Python.
+          </Typography>
+
+          <div className="social-wrapper">
+            <Avatar className="linkedin">
               <a
+                className="linkedin-img"
                 href="https://www.linkedin.com/in/mevans0911"
                 target="_blank"
-                style={{ color: "inherit" }}
               >
                 <LinkedInIcon style={{ marginTop: "3px" }} />
               </a>
             </Avatar>
-            <Avatar
-              style={{
-                color: "black",
-                backgroundColor: "white",
-                marginLeft: "10px",
-                height: "30px",
-                width: "30px",
-                textDecoration: "none",
-              }}
-            >
+            <Avatar className="github">
               <a
+                className="github-img"
                 href="https://github.com/mattevans0911"
                 target="_blank"
-                style={{ color: "inherit" }}
               >
                 <GitHubIcon fontSize="large" />
               </a>
             </Avatar>
           </div>
+          <Button
+            onClick={handleOpen}
+            variant="contained"
+            // href="https://drive.google.com/file/d/1Q6XDyhT_3P2vFQMioFGoSSPZsT25kYWu/view?usp=sharing"
+            // target={"_blank"}
+            style={{
+              backgroundColor: "#fee36e",
+              color: "black",
+              marginTop: "25px",
+            }}
+          >
+            Resume
+            <Modal
+              open={open}
+              onClose={handleClose}
+              style={{
+                display: "flex",
+                justifyContent: "center",
+                marginBottom: "20px",
+                marginTop: "20px",
+              }}
+            >
+              <img src={resume} alt="resume" />
+            </Modal>
+          </Button>
         </div>
       </div>
-      <div
-        style={{
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center",
-        }}
-      >
+      <div className="right-centering-wrapper">
         <Card
-          sx={{ boxShadow: 3, backgroundColor: "white" }}
-          style={{
-            height: "80%",
-            width: "75%",
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
+          className="projects"
+          sx={{
+            boxShadow: 3,
+            backgroundColor: "#2f2f89",
           }}
         >
           <div>Grid 2</div>
