@@ -70,6 +70,11 @@
           }
         }
       }
+      .resume-button {
+        background-color: #fee36e;
+        color: black;
+        margin-top: 25px;
+      }
     }
   }
 
@@ -79,8 +84,8 @@
     align-items: center;
 
     .projects {
-      height: 80%;
-      width: 75%;
+      height: 75vh;
+      width: 25vw;
       display: flex;
       justify-content: center;
       align-items: center;
