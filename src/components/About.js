@@ -124,11 +124,13 @@ function About() {
               backgroundColor: "#2f2f89",
             }}
           >
-            <div>
+            <div style={{ display: "grid", gridTemplateRows: "90% 10%" }}>
               <h1>Front</h1>
-              <Button variant="contained" onClick={handleFlip}>
-                Contact Me
-              </Button>
+              <div>
+                <Button variant="contained" onClick={handleFlip}>
+                  Contact Me
+                </Button>
+              </div>
             </div>
           </Card>
           <Card
@@ -145,12 +147,13 @@ function About() {
                 style={{
                   display: "flex",
                   justifyContent: "space-evenly",
-                  marginTop: "25px",
                 }}
               >
-                <Button variant="contained" onClick={handleFlip}>
-                  Flip me
-                </Button>
+                <div>
+                  <Button variant="contained" onClick={handleFlip}>
+                    Flip me
+                  </Button>
+                </div>
               </div>
             </div>
           </Card>
