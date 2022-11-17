@@ -141,19 +141,36 @@ function About() {
             }}
             style={{ height: "75vh", width: "25vw" }}
           >
-            <div style={{ display: "grid", gridTemplateRows: "90% 10%" }}>
+            <div
+              style={{
+                height: "100%",
+                width: "100%",
+                display: "grid",
+                gridTemplateRows: "80% 20%",
+              }}
+            >
               <Form />
+
               <div
                 style={{
                   display: "flex",
-                  justifyContent: "space-evenly",
+                  justifyContent: "center",
+                  alignItems: "center",
+                  marginTop: "-15px",
                 }}
               >
-                <div>
-                  <Button variant="contained" onClick={handleFlip}>
-                    Flip me
-                  </Button>
-                </div>
+                <Button
+                  variant="contained"
+                  onClick={handleFlip}
+                  style={{
+                    height: "40%",
+                    width: "35%",
+                    backgroundColor: "#fee36e",
+                    color: "black",
+                  }}
+                >
+                  Flip me
+                </Button>
               </div>
             </div>
           </Card>
