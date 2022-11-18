@@ -8,8 +8,17 @@ import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import { Button } from "@mui/material";
 import Modal from "@mui/material/Modal";
-import resume from "../images/resume.png";
+import ListItem from "@mui/material/ListItem";
+import ListItemText from "@mui/material/ListItemText";
+import ListItemIcon from "@mui/material/ListItemIcon";
 import CloseIcon from "@mui/icons-material/Close";
+import { FaHtml5 } from "react-icons/fa";
+import { DiCss3 } from "react-icons/di";
+import { FaPython } from "react-icons/fa";
+import { IoLogoJavascript } from "react-icons/io5";
+import { FaReact } from "react-icons/fa";
+import resume from "../images/resume.png";
+import me from "../images/me.jpg";
 
 function About() {
   const [open, setOpen] = React.useState(false);
@@ -63,11 +72,6 @@ function About() {
             className="resume-button"
             onClick={handleOpen}
             variant="contained"
-            // style={{
-            //   backgroundColor: "#fee36e",
-            //   color: "black",
-            //   marginTop: "25px",
-            // }}
           >
             Resume
           </Button>
@@ -124,10 +128,52 @@ function About() {
               backgroundColor: "#2f2f89",
             }}
           >
-            <div style={{ display: "grid", gridTemplateRows: "90% 10%" }}>
-              <h1>Front</h1>
-              <div>
-                <Button variant="contained" onClick={handleFlip}>
+            <div className="card-front">
+              <div
+                style={{
+                  display: "flex",
+                  flexDirection: "column",
+                  justifyContent: "center",
+                  alignItems: "center",
+                }}
+              >
+                <Avatar src={me} sx={{ height: "200px", width: "200px" }} />
+                <div
+                  style={{
+                    display: "flex",
+                    justifyContent: "center",
+                    flexDirection: "column",
+                  }}
+                >
+                  <Typography variant="h2" style={{}}>
+                    Skills
+                  </Typography>
+                  <ListItem>
+                    <ListItemIcon>
+                      <FaHtml5 style={{ height: "25px", width: "25px" }} />
+                    </ListItemIcon>
+                    <Typography variant="h6">HTML</Typography>
+                  </ListItem>
+                </div>
+              </div>
+              <div
+                style={{
+                  display: "flex",
+                  justifyContent: "center",
+                  alignItems: "center",
+                  marginTop: "-15px",
+                }}
+              >
+                <Button
+                  variant="contained"
+                  style={{
+                    height: "40%",
+                    width: "40%",
+                    backgroundColor: "#fee36e",
+                    color: "black",
+                  }}
+                  onClick={handleFlip}
+                >
                   Contact Me
                 </Button>
               </div>
@@ -139,35 +185,15 @@ function About() {
               boxShadow: 3,
               backgroundColor: "#2f2f89",
             }}
-            style={{ height: "75vh", width: "25vw" }}
           >
-            <div
-              style={{
-                height: "100%",
-                width: "100%",
-                display: "grid",
-                gridTemplateRows: "80% 20%",
-              }}
-            >
+            <div className="card-back">
               <Form />
 
-              <div
-                style={{
-                  display: "flex",
-                  justifyContent: "center",
-                  alignItems: "center",
-                  marginTop: "-15px",
-                }}
-              >
+              <div className="card-button-back">
                 <Button
+                  className="button-back"
                   variant="contained"
                   onClick={handleFlip}
-                  style={{
-                    height: "40%",
-                    width: "35%",
-                    backgroundColor: "#fee36e",
-                    color: "black",
-                  }}
                 >
                   Flip me
                 </Button>

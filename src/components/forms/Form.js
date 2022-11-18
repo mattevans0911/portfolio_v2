@@ -90,7 +90,7 @@ function Form() {
             required
             id="outlined-required"
             label="Name"
-            inputProps={inputProps}
+            inputProps={{ style: { color: "white" } }}
             sx={{
               "& .MuiOutlinedInput-root": {
                 "& > fieldset": { borderColor: "white" },
@@ -105,6 +105,7 @@ function Form() {
             required
             id="outlined-required"
             label="Email"
+            inputProps={{ style: { color: "white" } }}
             sx={{
               "& .MuiOutlinedInput-root": {
                 "& > fieldset": { borderColor: "white" },
@@ -121,6 +122,7 @@ function Form() {
             rows={5}
             id="outlined-required"
             label="Message"
+            inputProps={{ style: { color: "white" } }}
             sx={{
               "& .MuiOutlinedInput-root": {
                 "& > fieldset": { borderColor: "white" },

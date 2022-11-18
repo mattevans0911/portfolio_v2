@@ -89,6 +89,34 @@
       display: flex;
       justify-content: center;
       align-items: center;
+
+      .card-front {
+        display: grid;
+        grid-template-rows: 80% 20%;
+        height: 100%;
+        width: 100%;
+      }
+
+      .card-back {
+        height: 100%;
+        width: 100%;
+        display: grid;
+        grid-template-rows: 80% 20%;
+
+        .card-button-back {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          margin-top: -15px;
+
+          .button-back {
+            height: 40%;
+            width: 40%;
+            background-color: #fee36e;
+            color: black;
+          }
+        }
+      }
     }
   }
 }
