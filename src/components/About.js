@@ -1,6 +1,7 @@
 import React from "react";
 import Card from "@mui/material/Card";
 import Typography from "@mui/material/Typography";
+import Stack from "@mui/material/Stack";
 import Avatar from "@mui/material/Avatar";
 import ReactCardFlip from "react-card-flip";
 import Form from "./forms/Form";
@@ -30,6 +31,14 @@ function About() {
     e.preventDefault();
     isFlipped ? setIsFlipped(false) : setIsFlipped(true);
   };
+
+  const skills = [
+    { icon: <FaHtml5 />, name: "HTML" },
+    { icon: <DiCss3 />, name: "CSS" },
+    { icon: <FaPython />, name: "Python" },
+    { icon: <IoLogoJavascript />, name: "JavaScript" },
+    { icon: <FaReact />, name: "ReactJs" },
+  ];
   return (
     <div className="about-wrapper">
       <div className="left-centering-wrapper">
@@ -137,7 +146,10 @@ function About() {
                   alignItems: "center",
                 }}
               >
-                <Avatar src={me} sx={{ height: "200px", width: "200px" }} />
+                <Avatar
+                  src={me}
+                  sx={{ height: "200px", width: "200px", marginTop: "15px" }}
+                />
                 <div
                   style={{
                     display: "flex",
@@ -145,15 +157,66 @@ function About() {
                     flexDirection: "column",
                   }}
                 >
-                  <Typography variant="h2" style={{}}>
+                  <Typography
+                    variant="h3"
+                    style={{ display: "flex", justifyContent: "center" }}
+                  >
                     Skills
                   </Typography>
-                  <ListItem>
-                    <ListItemIcon>
-                      <FaHtml5 style={{ height: "25px", width: "25px" }} />
-                    </ListItemIcon>
-                    <Typography variant="h6">HTML</Typography>
-                  </ListItem>
+                  <div
+                    style={{
+                      display: "flex",
+                      flexDirection: "column",
+                      justifyContent: "center",
+                    }}
+                  >
+                    {skills.map((s) => {
+                      return (
+                        <div
+                          style={{
+                            display: "grid",
+                            gridTemplateColumns: "20% 80%",
+                            alignItems: "center",
+                          }}
+                        >
+                          {s.icon}
+                          <Typography variant="h6">{s.name}</Typography>
+                        </div>
+                      );
+                    })}
+                    {/* <ListItem style={{ marginTop: "-5px" }}>
+                      <ListItemIcon>
+                        <FaHtml5 style={{ height: "25px", width: "25px" }} />
+                      </ListItemIcon>
+                      <Typography variant="h6">HTML</Typography>
+                    </ListItem>
+                    <ListItem style={{ marginTop: "-15px" }}>
+                      <ListItemIcon>
+                        <DiCss3 style={{ height: "25px", width: "25px" }} />
+                      </ListItemIcon>
+                      <Typography variant="h6">CSS</Typography>
+                    </ListItem>
+                    <ListItem style={{ marginTop: "-15px" }}>
+                      <ListItemIcon>
+                        <FaPython style={{ height: "25px", width: "25px" }} />
+                      </ListItemIcon>
+                      <Typography variant="h6">Python</Typography>
+                    </ListItem>
+                    <ListItem style={{ marginTop: "-15px" }}>
+                      <ListItemIcon>
+                        <IoLogoJavascript
+                          style={{ height: "25px", width: "25px" }}
+                        />
+                      </ListItemIcon>
+                      <Typography variant="h6">Javascript</Typography>
+                    </ListItem>
+                    <ListItem style={{ marginTop: "-15px" }}>
+                      <ListItemIcon>
+                        <FaReact style={{ height: "25px", width: "25px" }} />
+                      </ListItemIcon>
+                      <Typography variant="h6">ReactJs</Typography>
+                    </ListItem> */}
+                  </div>
                 </div>
               </div>
               <div
