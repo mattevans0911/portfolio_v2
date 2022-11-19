@@ -140,82 +140,71 @@ function About() {
             <div className="card-front">
               <div
                 style={{
-                  display: "flex",
-                  flexDirection: "column",
+                  height: "100%",
+                  display: "grid",
+                  gridTemplateRows: "200px 250px 85px",
                   justifyContent: "center",
                   alignItems: "center",
                 }}
               >
-                <Avatar
-                  src={me}
-                  sx={{ height: "200px", width: "200px", marginTop: "15px" }}
-                />
-                <div
-                  style={{
-                    display: "flex",
-                    justifyContent: "center",
-                    flexDirection: "column",
-                  }}
-                >
+                <div style={{ display: "flex", justifyContent: "center" }}>
+                  <Avatar
+                    src={me}
+                    sx={{ height: "200px", width: "200px", marginTop: "15px" }}
+                  />
+                </div>
+                <div>
                   <Typography
-                    variant="h3"
-                    style={{ display: "flex", justifyContent: "center" }}
+                    variant="h5"
+                    style={{
+                      display: "flex",
+                      justifyContent: "center",
+                      marginTop: "-5px",
+                      marginBottom: "15px",
+                      fontFamily: "'Mulish', sans-serif",
+                      color: "white",
+                    }}
                   >
-                    Skills
+                    Tools I Have Used
                   </Typography>
                   <div
                     style={{
+                      width: "100%",
                       display: "flex",
                       flexDirection: "column",
                       justifyContent: "center",
+                      alignItems: "center",
                     }}
                   >
                     {skills.map((s) => {
                       return (
                         <div
                           style={{
+                            width: "75px",
                             display: "grid",
-                            gridTemplateColumns: "20% 80%",
-                            alignItems: "center",
+                            gridTemplateColumns: "50% 50%",
+                            marginRight: "50px",
                           }}
                         >
-                          {s.icon}
-                          <Typography variant="h6">{s.name}</Typography>
+                          <div style={{ marginTop: "8px" }}>{s.icon}</div>
+                          <div
+                            style={{
+                              display: "flex",
+                              justifyContent: "center",
+                              marginLeft: "40px",
+                              color: "white",
+                            }}
+                          >
+                            <Typography
+                              variant="h6"
+                              style={{ fontFamily: "'Mulish', sans-serif" }}
+                            >
+                              {s.name}
+                            </Typography>
+                          </div>
                         </div>
                       );
                     })}
-                    {/* <ListItem style={{ marginTop: "-5px" }}>
-                      <ListItemIcon>
-                        <FaHtml5 style={{ height: "25px", width: "25px" }} />
-                      </ListItemIcon>
-                      <Typography variant="h6">HTML</Typography>
-                    </ListItem>
-                    <ListItem style={{ marginTop: "-15px" }}>
-                      <ListItemIcon>
-                        <DiCss3 style={{ height: "25px", width: "25px" }} />
-                      </ListItemIcon>
-                      <Typography variant="h6">CSS</Typography>
-                    </ListItem>
-                    <ListItem style={{ marginTop: "-15px" }}>
-                      <ListItemIcon>
-                        <FaPython style={{ height: "25px", width: "25px" }} />
-                      </ListItemIcon>
-                      <Typography variant="h6">Python</Typography>
-                    </ListItem>
-                    <ListItem style={{ marginTop: "-15px" }}>
-                      <ListItemIcon>
-                        <IoLogoJavascript
-                          style={{ height: "25px", width: "25px" }}
-                        />
-                      </ListItemIcon>
-                      <Typography variant="h6">Javascript</Typography>
-                    </ListItem>
-                    <ListItem style={{ marginTop: "-15px" }}>
-                      <ListItemIcon>
-                        <FaReact style={{ height: "25px", width: "25px" }} />
-                      </ListItemIcon>
-                      <Typography variant="h6">ReactJs</Typography>
-                    </ListItem> */}
                   </div>
                 </div>
               </div>
