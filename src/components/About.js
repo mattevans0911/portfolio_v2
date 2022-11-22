@@ -186,7 +186,9 @@ function About() {
                             marginRight: "50px",
                           }}
                         >
-                          <div style={{ marginTop: "8px" }}>{s.icon}</div>
+                          <div style={{ marginTop: "8px", color: "white" }}>
+                            {s.icon}
+                          </div>
                           <div
                             style={{
                               display: "flex",
