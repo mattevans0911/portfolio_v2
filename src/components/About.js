@@ -26,7 +26,7 @@ function About() {
   const [isFlipped, setIsFlipped] = React.useState(false);
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
-
+  console.log(process.env);
   const handleFlip = (e) => {
     e.preventDefault();
     isFlipped ? setIsFlipped(false) : setIsFlipped(true);
